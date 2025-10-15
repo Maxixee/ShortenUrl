@@ -22,24 +22,6 @@ public class UrlService {
         this.repository = repository;
     }
 
-    /*static String shortURL(int n) {
-        // Map to store 62 possible characters
-        char map[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789".toCharArray();
-
-        StringBuffer shorturl = new StringBuffer();
-
-        // Convert given integer id to a base 62 number
-        while (n > 0) {
-            // use above map to store actual character
-            // in short url
-            shorturl.append(map[n % 62]);
-            n = n / 62;
-        }
-
-        // Reverse shortURL to complete base conversion
-        return shorturl.reverse().toString();
-    }*/
-
     @Transactional
     public Urls shortenUrl(UrlRequestDto dto, HttpServletRequest servletRequest){
         String id;
